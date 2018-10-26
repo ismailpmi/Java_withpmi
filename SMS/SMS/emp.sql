@@ -1,0 +1,34 @@
+CREATE TABLE Student (
+
+  ID Number(38),
+  NAME Varchar(25) NOT NULL,
+  DEPARTMENT Varchar(25) NOT NULL,
+  MARK1(5,2)NOT NULL,
+  MARK2(5,2)NOT NULL,
+  MARK3(5,2)NOT NULL,
+  PRIMARY KEY (Ecode)
+);
+
+INSERT INTO Student (ID, NAME,MARK1,MARK2,MARK3)
+VALUES ('2334','Haamid','88','33','49'); 
+
+INSERT INTO Student (ID, NAME,MARK1,MARK2,MARK3)
+VALUES ('2332','kmid','88','88','38'); 
+
+INSERT INTO Student (ID, NAME,MARK1,MARK2,MARK3)
+VALUES ('2335','Haarun','66','63','66'); 
+
+INSERT INTO Student (ID, NAME,MARK1,MARK2,MARK3)
+VALUES ('2337','saba','55','31','54'); 
+
+DELETE FROM Student
+ WHERE NAME='saba'; 
+
+UPDATE Student
+ SET  NAME = kumar,
+ WHERE ID = 2202;
+
+SELECT NAME, ID FROM Student; 
+
+INSERT INTO Student (ID, NAME,MARK1,MARK2,MARK3)
+VALUES ('2336','Hamid','56','33','45'); 
