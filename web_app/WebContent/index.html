@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["username"].value;
+	var  y= document.forms["myForm"]["psw"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+	 if (y == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+				if(x="admin" || y="admin"){ 
+				
+					alert("valid User");
+					}
+					else{
+					alert("IN-Valid User");
+						}
+					return true;
+	}
+
+function Sumof(){
+var value = prompt("Please enter your name","");
+    
+ var n, sum = 0;
+       
+        while(value > 0)
+        {
+            n =value% 10;
+            sum = sum + n;
+            value= value/ 10;
+        }
+document.getElementById("txt1").innerHTML ="digi"+sum+"!";
+}
+function date(){
+var d = new Date();
+var dd= d.getDate();
+var mm=d.getMonth();
+ var yy = d.getFullYear();
+document.getElementById("tic").innerHTML =mm+"/"+yy+"/"+dd;
+
+}
+function time(){
+var d = new Date();
+var h= d.getHours();
+var m=d.getMinutes();
+ var s = d.getSeconds();
+document.getElementById("tac").innerHTML =h+":"+m+":"+s;
+
+}
+</script>
+
+</head>
+<body>
+<div><header><h1>Hello World</h1></header></div>
+<div>
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+  User name:<br>
+  <input type="text" name="username" required><br>
+  User password:<br>
+  <input type="password" name="psw" required>
+  <br><br>
+<input type="submit" value="Submit">
+</form>
+</div>
+<button name="btn1" onclick="Sumof()">try
+</button>
+<button name="btn2" onclick="date()">date
+</button>
+<button name="btn3" onclick="time()">time
+</button>
+<input type="text" id="txt1" ></input>
+<p id="tic"></p>
+<p id="tac"></p>
+<a id="id1" href=""  >green</a>
+<a id="id2" href=""  >blue</a>
+<a id="id3" href=""  >red</a>
+<img src="C:\pmi\heelo.jpg"></img>
+</body>
+</html>
